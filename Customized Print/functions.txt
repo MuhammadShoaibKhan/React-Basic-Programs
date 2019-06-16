@@ -1,0 +1,19 @@
+
+
+
+
+var HelloWorld = React.createClass({
+    render: function() {
+    return (
+    <p>Hello, componentized world!</p>
+    );
+    }
+    });
+
+
+
+class HelloWorld extends React.Component {
+    render() {
+        return <h1>Hello, componentized world! </h1>
+    }
+}
