@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Styling in React</title>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.
+js"></script>
+
+<style>
+       
+       #container {
+        padding: 50px;
+        background-color: rgb(10, 178, 230);
+                  }
+
+</style>
+
+</head>
+<body>
+        
+
+
+
+       <div id="container"></div>
+    
+        <script type="text/babel">
+        
+        class Letter extends React.Component{
+        
+        render() {
+        return (
+        <div>
+        {this.props.children}
+        </div>
+        );
+        }
+        };
+
+        class HelloWorld extends React.Component {
+    render() {
+   //     return <p>Hello, world!</p>
+        return <p>Hello, {this.props.gg}!</p> 
+    }
+
+    
+}
+
+        var destination = document.querySelector("#container");
+        ReactDOM.render(
+        <div id = 'container'>
+        <Letter>A</Letter>
+        <Letter>E</Letter>
+        <Letter>I</Letter>
+        <Letter>O</Letter>
+        <Letter>U</Letter>
+
+
+        
+        <HelloWorld gg="Batman"/>
+        <HelloWorld gg="Iron Man"/>
+        <HelloWorld gg="Nicolas Cage"/>
+        <HelloWorld gg="Mega Man"/>
+        <HelloWorld gg="Bono"/>
+        <HelloWorld gg="Catwoman"/>
+        </div>,
+
+       
+        
+        destination
+        );
+            </script>
+
+            
+
+<script>
+</script>
+</body>
+</html>
